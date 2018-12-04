@@ -30,8 +30,7 @@ import com.uninovafapi.mobiseg.model.Lancamento;
 import com.uninovafapi.mobiseg.repository.LancamentoRepository;
 import com.uninovafapi.mobiseg.repository.filter.LancamentoFilter;
 import com.uninovafapi.mobiseg.service.LancamentoService;
-
-import service.exception.PessoaInexistenteOuInativaException;
+import com.uninovafapi.mobiseg.service.exception.PessoaInexistenteOuInativaException;
 
 @RestController
 @RequestMapping("/lancamentos")

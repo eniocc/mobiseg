@@ -1,4 +1,4 @@
-package service.exception;
+package com.uninovafapi.mobiseg.service.exception;
 
 public class PessoaInexistenteOuInativaException extends RuntimeException {
 

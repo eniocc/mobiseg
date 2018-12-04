@@ -7,8 +7,7 @@ import com.uninovafapi.mobiseg.model.Lancamento;
 import com.uninovafapi.mobiseg.model.Pessoa;
 import com.uninovafapi.mobiseg.repository.LancamentoRepository;
 import com.uninovafapi.mobiseg.repository.PessoaRepository;
-
-import service.exception.PessoaInexistenteOuInativaException;
+import com.uninovafapi.mobiseg.service.exception.PessoaInexistenteOuInativaException;
 
 @Service
 public class LancamentoService {
