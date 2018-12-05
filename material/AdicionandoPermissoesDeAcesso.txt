@@ -1,0 +1,9 @@
+Agora apenas usuário autenticados podem fazer requisições, mesmo para a requisição da listagem de Categorias, antes liberada com "permitAll()"; Perceba que "permitAll()" ainda existe na classe ResourceServerConfig porém na 
+classe CategoriaResource o método "listar()" está anotado com "@PreAuthorize("hasAuthoriry('ROLE_PESQUISAR_CATEGORIA')")", viabilizando a listagem apenas para usuários autenticados e com a permissão "ROLE_PESQUISAR_CATEGORIA".
+
+Nesta implementação também podemos ter uma maior segurança quanto aos clientes das aplicaçãoes. 
+Na classe AuthorizationServerConfig perceba que temos 2 clientes: o cliente angular e o cliente mobile. Para o cliente angular temos 2 escopos: read e write; já para o cliente mobile temos apenas o scope read. Isso significa que 
+mesmo um usuário com permissões avançadas, como o usuário ADMIN, poderá ter seu acesso restringindo de acordo com o cliente utilizado, lembre-se que cliente é diferente de usuário, isso foi comentado em sala de aula.
+Na classe CategoriaResource logo acima dos métodos pode-se verificar a anotação @PreAuthorize, nesta anotação, além de passarmos a ROLE cadastrada no banco, podemos também especificar o scope a ser utilizado em cada 
+método.
+No Postman é só alterar o username e password (ver figura UserPasswordScopes.jpg) de acordo com os dados no AuthorizationServerConfig. 
