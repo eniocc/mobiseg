@@ -1,0 +1,12 @@
+Da forma que o projeto está tudo irá funcionar e não irá.
+Irá funcionar apenas com o Postman, entretanto, fora do ambiente do Postman isso não irá funcionar.
+Para contornarmos tal problema temos que inserir o conceito de CORS (https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+A aplicação utilizada pelo usuário (APP/Site por exemplo) necessitará comunicar-se com a aplicação backend de modo que os 2 estarão em "locais distintos", transformando a solicitação cliente-servidor em uma requisição 
+de origens cruzadas (cross-origin HTTP request).
+O CORS resolve este "problema" pra gente.
+Com a anotação @CrossOrigin já podemos dizer o que fazer e onde fazer e até o tempo de espera. Link da documentação (https://spring.io/guides/gs/rest-service-cors/). Até a versão do SpringSecurity utilizada aqui a 
+integração do CORS com o OAuth2 ainda não estava 100% pois o browser que toma o controle ao passar determinado parâmetros como vinhamos passando em nossos exemplos com o Postman, considerando que não teremos controle da 
+passagem destes parâmetros não não teremos a integração deste projeto com o CORS, ficando apenas como forma de conhecim
+Para contornarmos este 'problema' iremos criar um filtro.
+O filtro será implementado na próxima releas
+
